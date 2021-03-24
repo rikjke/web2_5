@@ -58,11 +58,13 @@ html {
 body {
     background-color: #fafaf9;
     overflow-x: hidden;
+    min-width: 320px;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 45px;
 }
 
 img {
@@ -138,6 +140,10 @@ a {
 .button_yellow {
     background-color: var(--yellow);
     box-shadow: 2px 4px 9px rgba(242,178,54, .42)
+}
+
+.button_catalog {
+    align-self: center;
 }
 
 .button_yellow:hover {
@@ -456,14 +462,15 @@ a {
     }
 
     .catalog__products {
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
         margin-top: 90px;
+        grid-gap: 30px;
     }
 
     .catalog__product {
         display: flex;
         flex-direction: column;
-        margin-right: 35px;
         border-radius: 12px;
         padding: 25px;
         box-shadow: 0px 4px 9px #d3d3d3;
@@ -774,21 +781,111 @@ a {
     margin-top: auto;
 }
 
+
 /* FOOTER ENDS */
 
 
 
 
+.contacts_mobile {
+    display: none;
+}
 
-
-
-
+.header__burger {
+    display: none;
+}
 
 
 
 
 /* MOBILE CONFIGURATION */
-@media screen and (max-width: 768px) {
+
+@media screen and (max-width: 1200px) {
+    .header__options {
+        margin-left: 20px;
+    }
+    .logo-wrapper {
+        margin-right: 50px;
+    }
+    .catalog__products {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .sales__cards {
+        flex-wrap: wrap;
+    }
+
+    .sales__card {
+        margin-bottom: 16px;
+    }
+
+    .header__search {
+        flex-basis: 260px;
+    }
+
+    .contacts {
+        font-size: 16px;
+    }
+}
+
+
+@media screen and (max-width: 992px) {
+    .footer__upper-container {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    .footer__site {
+        display: flex;
+        align-items: center;
+    }
+    .footer__logo {
+        margin-right: 30px;
+        align-self: flex-start;
+    }
+    .quest__inner {
+        padding: 0 54px;
+    }
+    .quest__heading {
+        text-align: left;
+    }
+    .header__burger, .header__card {
+        width: 66px;
+        height: 66px;
+        padding: 10px;
+        display: block;
+    }
+    .logo-wrapper {
+        order: 2;
+    }
+
+    .header__hamburger {
+        order: 3;
+    }
+
+    .contacts_mobile {
+        display: block;
+        margin: 20px 0 20px 54px;
+        font-size: 18px;
+    }
+    .header-nav_desktop, .contacts_desktop, .search_desktop, .header__user, .socials_desktop {
+        display: none;
+    }
+    .reviews-section {
+        padding: 98px 0 120px;
+    }
+
+    .quests {
+        grid-template-columns: 1fr;
+    }
+    .question__button {
+        font-size: 24px;
+    }
+
+    .reviews {
+        grid-template-columns: 1fr;
+    }
+
     html {
         font-size: 16px;
     }
@@ -816,9 +913,110 @@ a {
         font-size: 16px;
     }
 
-    .button {
+    /* .button {
         font-size: 14px;
+    } */
+
+}
+
+@media screen and (max-width: 768px) {
+    .footer__site {
+        display: flex;
+        flex-direction: column;
     }
 
+    .footer__logo {
+        align-self: center;
+    }
+    .quest__inner {
+        padding: 0 20px;
+    }
+
+    .quest__heading {
+        font-size: 36px;
+    }
+    .contacts_mobile {
+        display: block;
+        text-align: center;
+        margin: 20px 0;
+    }
+    .catalog {
+        padding: 65px 0 50px;
+    }
+
+    .reviews-section {
+        padding: 64px 0 120px;
+    }
+
+    .quests__icon {
+        min-width: 100px;
+    }
+    .quests__text {
+        font-size: 20px;
+    }
+
+    .catalog__products {
+        grid-template-columns: 1fr;
+    }
+
+    .question__button {
+        font-size: 20px;
+        text-align: left;
+    }
+
+    .container {
+        padding: 0 20px;
+    }
+
+}
+
+@media screen and (max-width: 576px) {
+    .content {
+        margin-right: 60px;
+    }
+
+    .important {
+        flex-basis: 100%;
+    }
+    .pages {
+        margin: 0;
+    }
+    .footer__nav {
+        flex-wrap: wrap;
+    }
+    .header__burger, .header__card {
+        width: 50px;
+        height: 50px;
+        padding: 5px;
+    }
+
+    .logo-wrapper {
+        display: none;
+    }
+
+    .stars {
+        display: none;
+    }
+    .sales__card-box {
+        display: none;
+    }
+
+    .sales__card {
+        min-width: 290px;
+    }
+
+    .question__button {
+        font-size: 16px;
+    }
+
+    .container {
+        padding: 0 12px;
+    }
+}
+
+@media screen and (max-width: 384px) {
+    .pages {
+        margin: 30px 0;
+    }
 }
 /* MOBILE CONFIGURATION */
