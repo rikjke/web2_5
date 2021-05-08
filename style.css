@@ -1,3 +1,25 @@
+
+
+.screenreader-text {
+    position: absolute;
+    left: -999px;
+    width: 0px;
+    height: 0px;
+    top: auto;
+}
+
+a:focus, a:visited {
+    text-decoration: none;
+}
+
+.screenreader-text:focus {
+    color: black;
+    display: inline-block;
+    height: auto;
+    width: auto;
+    position: static;
+    margin: auto;
+}
 /* CONFIGURATION */
 
 :root {
@@ -19,28 +41,28 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 50px;
+    font-size: 3.2rem;
     line-height: 59px;
 }
 
 h2 {
-    font-size: 44px;
+    font-size: 2.7rem;
 }
 
 h3 {
-    font-size: 38px;
+    font-size: 2.4rem;
 }
 
 h4 {
-    font-size: 30px;
+    font-size: 2rem;
 }
 
 h5 {
-    font-size: 26px;
+    font-size: 1.6rem;
 }
 
 h6 {
-    font-size: 20px;
+    font-size: 1.2rem;
 }
 
 * {
@@ -50,7 +72,6 @@ h6 {
 }
 
 html {
-    font-size: 16px;
     overflow-x: hidden;
     font-family: 'Rubik', sans-serif
 }
@@ -73,10 +94,6 @@ img {
     height: auto;
 }
 
-button:focus, input:focus {
-    outline: none;
-}
-
 ::placeholder {
     color: var(--gray)
 }
@@ -84,7 +101,7 @@ button:focus, input:focus {
 button {
     border: none;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 1.1rem;
     font-family: 'Rubik', sans-serif;
 }
 
@@ -118,13 +135,12 @@ a {
 
 .button_simple {
     color: var(--red);
-    font-size: 16px;
+    font-size: 1rem;
 }
 
-.button_simple:hover {
+.button_simple:hover, .button_simple:focus {
     color: #a53145;
     text-decoration: underline;
-    font-size: 18px;
 }
 
 .button_red {
@@ -132,7 +148,7 @@ a {
     box-shadow: 2px 4px 9px rgba(243, 55, 87, .42);
 }
 
-.button_red:hover {
+.button_red:hover, .button_red:focus {
     background-color: #b0354a;
     color: var(--black);
 }
@@ -146,7 +162,7 @@ a {
     align-self: center;
 }
 
-.button_yellow:hover {
+.button_yellow:hover, .button_yellow:focus {
     background-color:#fbb835;
     color: var(--black);
 }
@@ -186,7 +202,7 @@ a {
 
 .logo-text {
     font-weight: 500;
-    font-size: 18px;
+    font-size: 1.1rem;
     margin-top: 5px;
 }
 
@@ -217,7 +233,7 @@ a {
 
 .contacts {
     color: var(--brown);
-    font-size: 18px;
+    font-size: 1.1rem;
     font-weight: 500;
 }
 
@@ -234,7 +250,7 @@ a {
     background-color: var(--red);
     font-family: 'Rubik', sans-serif;
     font-weight: 500;
-    font-size: 12px;
+    font-size: .8rem;
     width: 16px;
     height: 16px;
     color: #fff;
@@ -410,6 +426,7 @@ a {
     .sales__card-heading {
         font-size: 24px;
         color: var(--red);
+        font-weight: bold;
     }
 
     .sales__card-box {
@@ -428,7 +445,7 @@ a {
     .sales__card-box-item_center {
         align-items: center;
         font-weight: 500;
-        font-size: 38px;
+        font-size: 2.5rem;
     }
 
     .sales__card-box-item_bottom {
@@ -496,6 +513,7 @@ a {
 
     .catalog__product-heading {
         margin: 20px 0;
+        font-weight: bold;
         transition: .4s ease color;
     }
 
@@ -508,7 +526,7 @@ a {
         text-align: center;
         color: var(--red);
         font-weight: 500;
-        font-size: 24px;
+        font-size: 1.5rem;
     }
 
     .catalog__product-decription-item {
@@ -588,8 +606,9 @@ a {
     }
 
     .quests__text {
-        font-size: 24px;
+        font-size: 1.5rem;
         max-width: 400px;
+        font-weight: 400;
     }
 
     /* QUEST SECTION END */
@@ -667,13 +686,13 @@ a {
 
     .review__stars {
         color: var(--yellow);
-        font-size: 21px;
+        font-size: 1.2rem;
         display: flex;
         align-items: center;
     }
 
     .big-number {
-        font-size: 42px;
+        font-size: 2.3rem;
         font-weight: 300;
     }
 
@@ -688,7 +707,7 @@ a {
     .review__read-all {
         color: var(--yellow);
         text-decoration: underline;
-        font-size: 20px;
+        font-size: 1.3rem;
         font-weight: 400;
         text-transform: initial;
     }
@@ -720,7 +739,7 @@ a {
 .footer__bottom {
     background-color: var(--black);
     color: var(--silver);
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .footer__links {
@@ -827,7 +846,7 @@ a {
     }
 
     .contacts {
-        font-size: 16px;
+        font-size: 1rem;
     }
 }
 
@@ -882,43 +901,12 @@ a {
         grid-template-columns: 1fr;
     }
     .question__button {
-        font-size: 24px;
+        font-size: 1.5rem;
     }
 
     .reviews {
         grid-template-columns: 1fr;
     }
-
-    html {
-        font-size: 16px;
-    }
-    h1 {
-        font-size: 42px;
-    }
-
-    h2 {
-        font-size: 38px;
-    }
-
-    h3 {
-        font-size: 32px;
-    }
-
-    h4 {
-        font-size: 26px;
-    }
-
-    h5 {
-        font-size: 20px;
-    }
-
-    h6 {
-        font-size: 16px;
-    }
-
-    /* .button {
-        font-size: 14px;
-    } */
 
 }
 
@@ -953,7 +941,7 @@ a {
     }
 
     .quest__heading {
-        font-size: 36px;
+        font-size: 2.4rem;
     }
     .contacts_mobile {
         display: block;
@@ -980,7 +968,7 @@ a {
     }
 
     .question__button {
-        font-size: 20px;
+        font-size: 1.3rem;
         text-align: left;
     }
 

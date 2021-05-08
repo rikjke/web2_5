@@ -10,13 +10,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <a id='skip-nav' class='screenreader-text' href="#quest">Skip Navigation</a>
     <header class="header">
-        
         <div class="header__upper">
             <div class="container container_header">
 
                 <div class="logo-wrapper">
-                    <img class="logo" src="img/logo.svg" alt="ПчёлкШоп">
+                    <img class="logo" src="img/logo.svg" alt="ПчёлкоШоп">
                     <h3 class="logo-text">Лаборатория игр</h3>
                 </div>
     
@@ -30,18 +30,17 @@
 
                 <div class="header__hamburger">
                     <button class="header__burger">
-                        <img src="img/header/burger.svg" alt="">
+                        <img src="img/header/burger.svg" alt="Меню">
                     </button>
                 </div>
     
                 <div class="header__options">
-                    <button class="header__card"><img src="img/header/card.svg" alt="card" class="card"></button>
-                    <button class="header__user"><img src="img/header/user.svg" alt="user" class="user"></button>
+                    <button class="header__card"><img src="img/header/card.svg" alt="Корзина" class="card"></button>
+                    <button class="header__user"><img src="img/header/user.svg" alt="Личный кабинет" class="user"></button>
                 </div>
     
             </div>
         </div>
-
         <nav class="header__nav">
             <div class="contacts contacts_mobile">
                 <div class="phone">8-(000)-000-00-00 МСК (9-21)</div>
@@ -49,28 +48,36 @@
             <div class="container container_header-nav header-nav_desktop">
                 <ul class="header__menu">
                     <li class="header__menu-item">
-                        <a aria-label="Перейти на страницу Каталог" href="#" class="header__menu-link">Каталог</a>
+                        <a aria-labelledby="Перейти на страницу Каталог" 
+                        title="Каталог" href="#" class="header__menu-link">Каталог</a>
                     </li>
                     <li class="header__menu-item">
-                        <a aria-label="Перейти на страницу Акции" href="#" class="header__menu-link">Акции</a>
+                        <a aria-labelledby="Перейти на страницу Акции" 
+                        title="Акции" href="#" class="header__menu-link">Акции</a>
                     </li>
                     <li class="header__menu-item">
-                        <a aria-label="Перейти на страницу Отзывы" href="#" class="header__menu-link">Отзывы</a>
+                        <a aria-labelledby="Перейти на страницу Отзывы" 
+                        title="Отзывы" href="#" class="header__menu-link">Отзывы</a>
                     </li>
                     <li class="header__menu-item">
-                        <a aria-label="Перейти на страницу Доставка и оплата" href="#" class="header__menu-link">Доставка и оплата</a>
+                        <a aria-labelledby="Перейти на страницу Доставка и оплата" 
+                        title="Доставка и оплата" href="#" class="header__menu-link">Доставка и оплата</a>
                     </li>
                     <li class="header__menu-item">
-                        <a aria-label="Перейти на страницу О компании" href="#" class="header__menu-link">О компании</a>
+                        <a aria-labelledby="Перейти на страницу О компании" 
+                        title="О компании" href="#" class="header__menu-link">О компании</a>
                         <ul class="header__submenu">
                             <li class="header__submenu-item">
-                                <a aria-label="Перейти на страницу О нас" class="header__submenu-link" href="#">О нас</a>
+                                <a aria-labelledby="Перейти на страницу О нас" 
+                                title="О нас" class="header__submenu-link" href="#">О нас</a>
                             </li>
                             <li class="header__submenu-item">
-                                <a aria-label="Перейти на страницу Контакты" class="header__submenu-link" href="#">Контакты</a>
+                                <a aria-labelledby="Перейти на страницу Контакты" 
+                                title="Контакты" class="header__submenu-link" href="#">Контакты</a>
                             </li>
                             <li class="header__submenu-item">
-                                <a aria-label="Перейти на страницу Документы" class="header__submenu-link" href="#">Документы</a>
+                                <a aria-labelledby="Перейти на страницу Документы" 
+                                title="Документы" class="header__submenu-link" href="#">Документы</a>
                             </li>
                         </ul>
                     </li>
@@ -82,7 +89,7 @@
     <main class="main">
 
 
-        <section class="quest">
+        <section id="quest" class="quest">
             <div class="quest__inner">
                 <h1 class="quest__heading">Квест в коробке – объединяет
                     семью и друзей в поисках разгадки</h1>
@@ -99,7 +106,7 @@
             </ul>
         </section>
 
-        <article class="sales">
+        <article id="sales" class="sales">
 
             <div class="container">
                 <div class="line">
@@ -119,7 +126,7 @@
                         </div>
 
                         <div class="sales__card-text">
-                            <h5 class="sales__card-heading">Скидка -15% на груп...</h5>
+                            <span class="sales__card-heading">Скидка -15% на груп...</span>
                             <p class="sales__card-p">Получите скидку -15% при 
                                 оформлении группового заказа в период с 1 января 2021 г. по 19...</p>
                         </div>
@@ -133,7 +140,7 @@
                         </div>
 
                         <div class="sales__card-text">
-                            <h5 class="sales__card-heading">Скидка -15% на груп...</h5>
+                            <span class="sales__card-heading">Скидка -15% на груп...</span>
                             <p class="sales__card-p">Получите скидку -15% при 
                                 оформлении группового заказа в период с 1 января 2021 г. по 19...</p>
                         </div>
@@ -146,7 +153,7 @@
                         </div>
 
                         <div class="sales__card-text">
-                            <h5 class="sales__card-heading">Скидка -15% на груп...</h5>
+                            <span class="sales__card-heading">Скидка -15% на груп...</span>
                             <p class="sales__card-p">Получите скидку -15% при 
                                 оформлении группового заказа в период с 1 января 2021 г. по 19...</p>
                         </div>
@@ -156,7 +163,7 @@
             </div>
         </article>
 
-        <section class="catalog">
+        <section id="catalog" class="catalog">
             <div class="container">
 
                 <h2 class="catalog__heading">Каталог игр</h2>
@@ -183,10 +190,10 @@
                             </picture>
 
                         </div>
-                        <h6 class="catalog__product-heading">
+                        <span class="catalog__product-heading">
                             Настольная игра “Сказочное 
                             королевство” с дополненной...
-                        </h6>
+                        </span>
                         <ul class="catalog__product-description">
                             <li class="catalog__product-decription-item">Время игры: 60-90 мин</li>
                             <li class="catalog__product-decription-item">Кол-во игроков: 2-6</li>
@@ -213,10 +220,10 @@
                                 alt="">
                             </picture>
                         </div>
-                        <h6 class="catalog__product-heading">
+                        <span class="catalog__product-heading">
                             Настольная игра “Сказочное 
                             королевство” с дополненной...
-                        </h6>
+                        </span>
                         <ul class="catalog__product-description">
                             <li class="catalog__product-decription-item">Время игры: 60-90 мин</li>
                             <li class="catalog__product-decription-item">Кол-во игроков: 2-6</li>
@@ -243,10 +250,10 @@
                                 alt="">
                             </picture>
                         </div>
-                        <h6 class="catalog__product-heading">
+                        <span class="catalog__product-heading">
                             Настольная игра “Сказочное 
                             королевство” с дополненной...
-                        </h6>
+                        </span>
                         <ul class="catalog__product-description">
                             <li class="catalog__product-decription-item">Время игры: 60-90 мин</li>
                             <li class="catalog__product-decription-item">Кол-во игроков: 2-6</li>
@@ -263,13 +270,13 @@
             </div>
         </section>
 
-        <section class="player">
+        <section id="player" class="player">
             <div class="player-img-wrapper">
-                <img src="img/player.png" alt="player" class="player__img">
+                <img src="img/player.png" alt="" class="player__img">
             </div>
         </section>
 
-        <section class="quests-section">
+        <section id="quests-section" class="quests-section">
             <div class="container">
 
                 <h2 class="quests__heading">Квест – возможность подарить <br>
@@ -279,34 +286,34 @@
 
                     <li class="quests__item">
                         <div class="quests__icon">
-                            <img src="img/quest-1.svg" alt="team">
+                            <img src="img/quest-1.svg" alt="">
                         </div>
-                        <h5 class="quests__text">Объединяет семью и друзей 
-                            в поисках одной разгадки!</h5>
+                        <span class="quests__text">Объединяет семью и друзей 
+                            в поисках одной разгадки!</span>
                     </li>
                     
                     <li class="quests__item">
                         <div class="quests__icon">
-                            <img src="img/quest-2.svg" alt="team">
+                            <img src="img/quest-2.svg" alt="">
                         </div>
-                        <h5 class="quests__text">Заменит аниматора 
-                            на празднике и обеспечит мероприятие на 5+!</h5>
+                        <span class="quests__text">Заменит аниматора 
+                            на празднике и обеспечит мероприятие на 5+!</span>
                     </li>
 
                     <li class="quests__item">
                         <div class="quests__icon">
-                            <img src="img/quest-3.svg" alt="team">
+                            <img src="img/quest-3.svg" alt="">
                         </div>
-                        <h5 class="quests__text">Развивает логику и
-                            последовательное мышление!</h5>
+                        <span class="quests__text">Развивает логику и
+                            последовательное мышление!</span>
                     </li>
 
                     <li class="quests__item">
                         <div class="quests__icon">
-                            <img src="img/quest-4.svg" alt="team">
+                            <img src="img/quest-4.svg" alt="">
                         </div>
-                        <h5 class="quests__text">Все необходимое - уже есть
-                            в коробке!</h5>
+                        <span class="quests__text">Все необходимое - уже есть
+                            в коробке!</span>
                     </li>
 
                 </ul>
@@ -316,7 +323,7 @@
             </div>
         </section>
 
-        <section class="questions-section">
+        <section id="questions-section" class="questions-section">
             <div class="container">
                 <h2 class="questions__heading">Часто задаваемые вопросы</h2>
 
@@ -353,7 +360,7 @@
             </div>
         </section>
 
-        <section class="reviews-section">
+        <section id="reviews-section" class="reviews-section">
 
             <div class="container">
                 <h2 class="reviews__heading">Отзывы о наших играх</h2>
@@ -476,12 +483,12 @@
         </section>
     </main>
 
-    <footer class="footer">
+    <footer id="footer" class="footer">
         <div class="footer__upper">
             <div class="container footer__upper-container">
                 <div class="footer__site">
 
-                    <div class="footer__logo"><img src="img/logo.svg" alt=""></div>
+                    <div class="footer__logo"><img src="img/logo.svg" alt="ПчелкоШоп"></div>
                     
                     <div class="contacts contacts_footer">
                         <div class="contacts__item">8-(000)-000-00-00 МСК (9-21)</div>
@@ -496,52 +503,52 @@
                 <nav class="footer__nav">
                     <ul class="content">
                         <li class="content__item">
-                            <a href="#" class="content__link">Акции и новости</a>
+                            <a href="#" title="Акции и новости" aria-label="Перейти на страницу Акции и новости" class="content__link">Акции и новости</a>
                         </li>
                         <li class="content__item">
-                            <a href="#" class="content__link">Игры для праздника</a>
+                            <a href="#" title="Игры для праздника" aria-label="Перейти на страницу Игры для праздника" class="content__link">Игры для праздника</a>
                         </li>
                         <li class="content__item">
-                            <a href="#" class="content__link">Развивающие игры</a>
+                            <a href="#" title="Развивающие игры" aria-label="Перейти на страницу Развивающие игры" class="content__link">Развивающие игры</a>
                         </li>
                         <li class="content__item">
-                            <a href="#" class="content__link">Игры в дорогу</a>
+                            <a href="#" title="Игры в дорогу" aria-label="Перейти на страницу Игры в дорогу" class="content__link">Игры в дорогу</a>
                         </li>
                     </ul>
                     <ul class="pages">
                         <li class="pages__item">
-                            <a href="#" class="pages__link">Отзывы</a>
+                            <a href="#" title="Отзывы" aria-labelledby="Перейти на страницу Отзывы" class="pages__link">Отзывы</a>
                         </li>
                         <li class="pages__item">
-                            <a href="#" class="pages__link">Доставка и оплата</a>
+                            <a href="#" title="Доставка и оплата" aria-labelledby="Перейти на страницу Доставка и оплата" class="pages__link">Доставка и оплата</a>
                         </li>
                         <li class="pages__item">
-                            <a href="#" class="pages__link">Возврат</a>
+                            <a href="#" title="Возврат" aria-labelledby="Перейти на страницу Возврат" class="pages__link">Возврат</a>
                         </li>
                         <li class="pages__item">
-                            <a href="#" class="pages__link">О нас</a>
+                            <a href="#" title="О нас" aria-labelledby="Перейти на страницу О нас" class="pages__link">О нас</a>
                         </li>
                         <li class="pages__item">
-                            <a href="#" class="pages__link">Контакты</a>
+                            <a href="#" title="Контакты" aria-labelledby="Перейти на страницу Контакты" class="pages__link">Контакты</a>
                         </li>
                         <li class="pages__item">
-                            <a href="#" class="pages__link">Документы</a>
+                            <a href="#" title="Документы" aria-labelledby="Перейти на страницу Документы" class="pages__link">Документы</a>
                         </li>
                     </ul>
                     
                     <div class="important">
                         <ul class="important-pages">
                             <li class="important-pages__item">
-                                <a href="#" class="important-pages__link"><strong>Личный кабинет</strong></a>
+                                <a href="#" title="Личный кабинет" class="important-pages__link" aria-labelledby="Перейти на страницу Личный кабинет"><strong>Личный кабинет</strong></a>
                             </li>
                             <li class="important-pages__item">
-                                <a href="#" class="important-pages__link">Партнерам</a>
+                                <a href="#" title="Партнерам" class="important-pages__link" aria-labelledby="Перейти на страницу Партнерам">Партнерам</a>
                             </li>
                             <li class="important-pages__item">
-                                <a href="#" class="important-pages__link">Групповой заказ</a>
+                                <a href="#" title="Групповой заказ" class="important-pages__link" aria-labelledby="Перейти на страницу Групповой заказ">Групповой заказ</a>
                             </li>
                             <li class="important-pages__item">
-                                <a href="#" class="important-pages__link">Постоянный покупатель</a>
+                                <a href="#" title="Постоянный покупатель" class="important-pages__link" aria-labelledby="Перейти на страницу Постоянный покупатель">Постоянный покупатель</a>
                             </li>
                         </ul>
 
