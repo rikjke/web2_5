@@ -1,15 +1,15 @@
 /* CONFIGURATION */
 
 :root {
-    --red: #db4e66;
-    --yellow: #f2b236;
-    --blue: #90c1bf;
+    --red: #c4364e;
+    --yellow: #876219;
+    --blue: #295e5d;
     --lightbrown: #d7b9ac;
     --silver: #e8eceb;
     --brown: #884900;
     --black: #222528;
     --darkgray: #5b636b;
-    --gray: #a5aaaf;
+    --gray: #47494a;
     --lightgray: #ced0d2;
     --sectionLightgray: #f7f7f7;
 }
@@ -56,7 +56,7 @@ html {
 }
 
 body {
-    background-color: #fafaf9;
+    background-color: #fff;
     overflow-x: hidden;
     min-width: 320px;
 }
@@ -414,7 +414,7 @@ a {
 
     .sales__card-box {
         display: flex;
-        color: #fafaf9;
+        color: #fff;
         flex-direction: column;
         border-radius: 10px;
         padding: 12px 16px;
@@ -445,8 +445,8 @@ a {
     /* SALES ARTICLE END */
 
     .catalog, .questions-section  {
-        border-top: 1px solid #A5AAAF;
-        border-bottom: 1px solid #A5AAAF;
+        border-top: 1px solid var(--gray);
+        border-bottom: 1px solid var(--gray);
         background-color: var(--sectionLightgray);
     }
 
@@ -661,7 +661,7 @@ a {
     }
 
     .review__date {
-        color: #a5aaaf;
+        color: var(--gray);
         margin: 10px 0 7px;
     }
 
@@ -699,7 +699,7 @@ a {
 /* FOOTER */
 
 .footer__upper {
-    color: #fafaf9;
+    color: #fff;
     background: rgb(242,178,54);
     background: linear-gradient(135deg,
      rgba(242,178,54,1) 0%,
