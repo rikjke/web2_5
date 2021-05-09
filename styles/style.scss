@@ -1,155 +1,6 @@
-/* CONFIGURATION */
+@import "variables.scss";
+@import "configuration.scss";
 
-:root {
-    --red: #db4e66;
-    --yellow: #f2b236;
-    --blue: #90c1bf;
-    --lightbrown: #d7b9ac;
-    --silver: #e8eceb;
-    --brown: #884900;
-    --black: #222528;
-    --darkgray: #5b636b;
-    --gray: #a5aaaf;
-    --lightgray: #ced0d2;
-    --sectionLightgray: #f7f7f7;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 500;
-}
-
-h1 {
-    font-size: 50px;
-    line-height: 59px;
-}
-
-h2 {
-    font-size: 44px;
-}
-
-h3 {
-    font-size: 38px;
-}
-
-h4 {
-    font-size: 30px;
-}
-
-h5 {
-    font-size: 26px;
-}
-
-h6 {
-    font-size: 20px;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    font-size: 16px;
-    overflow-x: hidden;
-    font-family: 'Rubik', sans-serif
-}
-
-body {
-    background-color: #fafaf9;
-    overflow-x: hidden;
-    min-width: 320px;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 45px;
-}
-
-img {
-    width: 100%;
-    display: block;
-    height: auto;
-}
-
-button:focus, input:focus {
-    outline: none;
-}
-
-::placeholder {
-    color: var(--gray)
-}
-
-button {
-    border: none;
-    cursor: pointer;
-    font-size: 18px;
-    font-family: 'Rubik', sans-serif;
-}
-
-ul {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-    color: #fff;
-}
-
-
-
-/* CONFIGURATION ENDS */
-
-
-.button {
-    text-transform: uppercase;
-    transition: .4s ease all;
-    font-weight: 500;
-    background: none;
-}
-
-.button_background {
-    width: 300px;
-    min-height: 54px;
-    border-radius: 14px;
-    color: #fff;
-}
-
-.button_simple {
-    color: var(--red);
-    font-size: 16px;
-}
-
-.button_simple:hover {
-    color: #a53145;
-    text-decoration: underline;
-    font-size: 18px;
-}
-
-.button_red {
-    background-color: var(--red);
-    box-shadow: 2px 4px 9px rgba(243, 55, 87, .42);
-}
-
-.button_red:hover {
-    background-color: #b0354a;
-    color: var(--black);
-}
-
-.button_yellow {
-    background-color: var(--yellow);
-    box-shadow: 2px 4px 9px rgba(242,178,54, .42)
-}
-
-.button_catalog {
-    align-self: center;
-}
-
-.button_yellow:hover {
-    background-color:#fbb835;
-    color: var(--black);
-}
 
 /* HEADER */
 
@@ -199,9 +50,9 @@ a {
     padding: 12px 20px;
     width: 100%;
     border: none;
-    color: var(--gray);
+    color: $gray;
     font-size: 16px;
-    background-image: url('img/search.svg');
+    background-image: url('../img/search.svg');
     background-position: 95%;
     background-repeat: no-repeat;
 }
@@ -216,7 +67,7 @@ a {
 }
 
 .contacts {
-    color: var(--brown);
+    color: $brown;
     font-size: 18px;
     font-weight: 500;
 }
@@ -231,7 +82,7 @@ a {
     right: 3px;
     top: 3px;
     border-radius: 50%;
-    background-color: var(--red);
+    background-color: $red;
     font-family: 'Rubik', sans-serif;
     font-weight: 500;
     font-size: 12px;
@@ -245,13 +96,13 @@ a {
 }
 
 .header__menu-link {
-    color: var(--black);
+    color: $black;
     padding: 20px;
     display: block;
 }
 
 .header__menu-item:hover .header__menu-link {
-    background-color: var(--yellow);
+    background-color: $yellow;
     color: #fff;
 }
 
@@ -293,12 +144,12 @@ a {
 
 .header__submenu-link {
     padding: 20px;
-    color: var(--black);
+    color: $black;
     display: block;
 }
 
 .header__submenu-link:hover {
-    background-color: var(--yellow);
+    background-color: $yellow;
     color: #fff;
 }
 
@@ -316,7 +167,7 @@ a {
     /* QUEST SECTION*/
     
     .quest {
-        background-image: url("img/header-bg.jpg");
+        background-image: url("../img/header-bg.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         color: #fff;
@@ -346,7 +197,7 @@ a {
         margin-right: 20px;
     }
     .quest__socials-link {
-        background: url('img/socials/socials.svg') no-repeat;
+        background: url('../img/socials/socials.svg') no-repeat;
         width: 50px;
         height: 50px;
         background-size: cover;
@@ -409,7 +260,7 @@ a {
 
     .sales__card-heading {
         font-size: 24px;
-        color: var(--red);
+        color: $red;
     }
 
     .sales__card-box {
@@ -436,18 +287,18 @@ a {
     }
 
     .sales__card:nth-child(2n) .sales__card-box {
-        background-color: var(--yellow);
+        background-color: $yellow;
     }
 
     .sales__card:nth-child(2n+1) .sales__card-box {
-        background-color: var(--blue);
+        background-color: $blue;
     }
     /* SALES ARTICLE END */
 
     .catalog, .questions-section  {
         border-top: 1px solid #A5AAAF;
         border-bottom: 1px solid #A5AAAF;
-        background-color: var(--sectionLightgray);
+        background-color: $sectionLightgray;
     }
 
     /* CATALOG SECTION */
@@ -483,7 +334,7 @@ a {
     }
 
     .catalog__product-age {
-        background-color: var(--blue);
+        background-color: $blue;
         width: 135px;
         padding: 5px 12px;
         text-transform: uppercase;
@@ -500,13 +351,13 @@ a {
     }
 
     .catalog__product:hover .catalog__product-heading {
-        color: var(--yellow)
+        color: $yellow
     }
 
     .catalog__product-price {
         margin: 24px 0;
         text-align: center;
-        color: var(--red);
+        color: $red;
         font-weight: 500;
         font-size: 24px;
     }
@@ -523,7 +374,7 @@ a {
         content: '';
         width: 22px;
         height: 22px;
-        background: url('img/game/game-icons.svg') no-repeat;
+        background: url('../img/game/game-icons.svg') no-repeat;
         background-size: cover;
         position: absolute;
         left: 0;
@@ -551,7 +402,7 @@ a {
     /* PLAYER SECTION */
 
     .player {
-        background: url('img/player-bg.png') no-repeat;
+        background: url('../img/player-bg.png') no-repeat;
         background-size: cover;
         min-height: 100vh;
         margin-top: 80px;
@@ -666,7 +517,7 @@ a {
     }
 
     .review__stars {
-        color: var(--yellow);
+        color: $yellow;
         font-size: 21px;
         display: flex;
         align-items: center;
@@ -682,11 +533,11 @@ a {
         width: 150px;
         height: 30px;
         display: inline-block;
-        background: url("img/star.svg");
+        background: url("../img/star.svg");
     }
 
     .review__read-all {
-        color: var(--yellow);
+        color: $yellow;
         text-decoration: underline;
         font-size: 20px;
         font-weight: 400;
@@ -718,8 +569,8 @@ a {
 }
 
 .footer__bottom {
-    background-color: var(--black);
-    color: var(--silver);
+    background-color: $black;
+    color: $silver;
     font-size: 16px;
 }
 
