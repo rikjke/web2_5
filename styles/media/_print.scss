@@ -1,0 +1,64 @@
+@use "../variables.scss" as *;
+
+/* PRINT */
+
+@page {
+    size: A4;
+    margin: 1;
+}
+
+@media print {
+    *, *::before, *::after {
+        background: #fff !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    .header__hamburger,  .header__search, .header__options, .header__nav, .sales, .footer__nav, .footer__links,
+    .quest__socials {
+        display: none !important;
+    }
+    
+    .footer__site {
+        margin: 0 auto;
+    }
+
+    .footer__copyright {
+        margin: 0 auto !important;
+    }
+
+    .quest {
+        page-break-after: always;
+    }
+
+    .button, .review {
+        box-shadow: none;
+    }
+
+
+    .catalog__products {
+        display: block;
+        position: relative;
+    }
+
+    .catalog__product {
+        position: relative;
+        width: 75%;
+        margin: 0 auto !important;
+        page-break-inside: avoid;
+        border: 1mm solid #000;
+    }
+
+    .quests-section, footer {
+        page-break-before: always;
+    }
+
+    .contacts {
+        display: block !important;
+    }
+
+    .player {
+        display: none;
+    }
+}

@@ -1,0 +1,259 @@
+@use "../variables.scss" as *;
+
+/* MEDIA */
+
+@media (max-width: 1200px) {
+    .footer {
+        &__bottom-container {
+            padding: 40px 20px !important;
+        }
+    }
+
+    .header {
+        &__options {
+            margin-left: 20px;
+        }
+
+        &__search {
+            flex-basis: 260px;
+        }
+    }
+
+    .catalog {
+        &__products {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    .sales {
+        &__cards {
+            flex-wrap: wrap;
+        }
+
+        &__card {
+            margin-bottom: 16px;
+        }
+    }
+
+    .logo-wrapper {
+        margin-right: 50px;
+    }
+
+
+    .contacts {
+        font-size: 16px;
+    }
+}
+
+
+@media (max-width: 992px) {
+    .footer {
+        &__upper-container {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+
+        &__site {
+            display: flex;
+            align-items: center;
+        }
+
+        &__logo {
+            margin-right: 30px;
+            align-self: flex-start;
+        }
+    }
+
+    .quest {
+        &__inner {
+            padding: 0 54px;
+        }
+
+        &__heading {
+            text-align: left;
+        }
+
+
+    }
+
+    .header {
+        &__burger, &__card {
+            width: 66px;
+            height: 66px;
+            padding: 10px;
+            display: block;
+        }
+
+        &__hamburger {
+            order: 3;
+        }
+    }
+
+    .logo-wrapper {
+        order: 2;
+    }
+
+    .contacts_mobile {
+        display: block;
+        margin: 20px 0 20px 54px;
+        font-size: 18px;
+    }
+    .header-nav_desktop, .contacts_desktop, .search_desktop, .header__user, .socials_desktop {
+        display: none;
+    }
+    .reviews-section {
+        padding: 98px 0 120px;
+    }
+
+    .quests {
+        grid-template-columns: 1fr;
+    }
+    .question__button {
+        font-size: 24px;
+    }
+
+    .reviews {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .footer {
+        &__links {
+            flex-direction: column;
+
+        }
+
+        &__bottom-container {
+            flex-direction: column;
+        }
+
+        &__copyright {
+            margin-left: 0;
+        }
+
+        &__links {
+            margin-right: 0;
+            text-align: center;
+        }
+
+        &__links-item {
+            margin-right: 0;
+        }
+
+        &__site {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__logo {
+            align-self: center;
+        }
+    }
+
+    .quest {
+        &__inner {
+            padding: 0 20px;
+        }
+
+        &__heading {
+            font-size: 36px;
+        }
+    }
+
+
+    .contacts_mobile {
+        display: block;
+        text-align: center;
+        margin: 20px 0;
+    }
+    .catalog {
+        padding: 65px 0 50px;
+    }
+
+    .reviews-section {
+        padding: 64px 0 120px;
+    }
+
+    .quests {
+        &__icon {
+            min-width: 100px;
+        }
+
+        &__text {
+            font-size: 20px;
+        }
+    }
+
+
+    .catalog__products {
+        grid-template-columns: 1fr;
+    }
+
+    .question__button {
+        font-size: 20px;
+        text-align: left;
+    }
+
+    .container {
+        padding: 0 20px;
+    }
+
+
+}
+
+@media (max-width: 576px) {
+    .catalog__product {
+        padding: 15px 5px;
+    }
+    .content {
+        margin-right: 60px;
+    }
+
+    .important {
+        flex-basis: 100%;
+    }
+    .pages {
+        margin: 0;
+    }
+    .footer__nav {
+        flex-wrap: wrap;
+    }
+    .header__burger, .header__card {
+        width: 50px;
+        height: 50px;
+        padding: 5px;
+    }
+
+    .logo-wrapper {
+        display: none;
+    }
+
+    .stars {
+        display: none;
+    }
+    .sales__card-box {
+        display: none;
+    }
+
+    .sales__card {
+        min-width: 290px;
+    }
+
+    .question__button {
+        font-size: 16px;
+    }
+
+    .container {
+        padding: 0 12px;
+    }
+}
+
+@media (max-width: 384px) {
+    .pages {
+        margin: 30px 0;
+    }
+}
+/* MEDIA */

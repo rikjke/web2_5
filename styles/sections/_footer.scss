@@ -1,0 +1,88 @@
+@use "../variables.scss" as *;
+
+/* FOOTER */
+
+.footer {
+    &__upper {
+        color: #fafaf9;
+        background: rgb(242,178,54);
+        background: linear-gradient(135deg,
+         rgba(242,178,54,1) 0%,
+        rgba(255,156,26,1) 100%);
+        padding: 60px 0 85px
+    }
+
+    &__upper-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__bottom {
+        background-color: $black;
+        color: $silver;
+        font-size: 16px; 
+    }
+
+    &__links {
+        display: flex;
+        margin-right: auto;
+        gap: 53px;
+    }
+
+    &__links {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__copyright {
+        margin-left: auto;
+    }
+
+    &__bottom-container {
+        display: flex;
+        align-items: center;
+        padding: 60px 0;
+    }
+
+    &__nav {
+        display: flex;
+    }
+
+}
+
+
+.contacts_footer {
+    margin: 15px 0 45px;
+}
+
+
+.pages {
+    margin: 0 54px;
+}
+
+.important {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.content__item, .pages__item, .important-pages__item {
+    margin-bottom: 18px;
+    &:hover {
+        text-decoration: underline;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+    
+}
+
+
+.socials {
+    display: flex;
+    margin-top: auto;
+}
+
+
+/* FOOTER ENDS */

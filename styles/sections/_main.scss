@@ -1,0 +1,372 @@
+@use "../variables.scss" as *;
+
+/* MAIN */
+
+    /* QUEST SECTION*/
+    
+    .quest {
+        background-image: url("../img/header-bg.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: #fff;
+        text-align: center;
+        padding: 235px 0 170px;
+        position: relative;
+
+
+        &__inner {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        &__p {
+            margin: 15px 0 45px;
+        }
+
+        &__socials {
+            position: absolute;
+            right: 12.5%;
+            bottom: 40px;
+            display: flex;
+            gap: 20px;
+        }
+
+
+        &__socials-link {
+            background: url('../img/socials/socials.svg') no-repeat;
+            width: 50px;
+            height: 50px;
+            background-size: cover;
+            display: block;
+        }
+
+        &__socials-item {
+            @for $i from 2 through 4 {
+                &:nth-child(#{$i}) {
+                    .quest__socials-link {
+                        background-position: (-63px * ($i - 1)) 0px;
+                    }
+                }
+            }
+        }
+        
+    }
+
+ 
+    /* QUEST SECTION END*/
+
+
+    /* SALES ARTICLE */
+    .sales {
+        padding: 48px 0 92px;
+        &__cards {
+            display: flex;
+            margin-top: 35px;
+        }
+
+        &__card {
+            padding: 35px;
+            filter: drop-shadow(0px 4px 9px #D3D3D3);
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 14px;
+            min-width: 545px;
+            margin-right: 15px;
+            &:nth-child(2n) {
+                .sales__card-box {
+                    background-color: $yellow;
+                }
+            }
+            &:nth-child(2n + 1) {
+                .sales__card-box {
+                    background-color: $blue;
+                }
+            }
+        }
+
+        &__card-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;        
+        }
+
+        &__card-heading {
+            font-size: 24px;
+            color: $red;
+        }
+
+        &__card-box {
+            display: flex;
+            color: #fafaf9;
+            flex-direction: column;
+            border-radius: 10px;
+            padding: 12px 16px;
+            margin-right: 18px;
+        }
+
+        &__card-box-item_top {
+            text-align: right;
+        }
+
+        &__card-box-item_center {
+            align-items: center;
+            font-weight: 500;
+            font-size: 38px;
+        }
+
+        &__card-box-item_bottom {
+            text-align: left;
+        }
+    }
+
+    .line {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+
+    /* SALES ARTICLE END */
+
+    .catalog, .questions-section  {
+        border-top: 1px solid #A5AAAF;
+        border-bottom: 1px solid #A5AAAF;
+        background-color: $sectionLightgray;
+    }
+
+    /* CATALOG SECTION */
+
+    .catalog {
+        padding: 80px 0 100px;
+
+        &__heading {
+            margin-bottom: 16px;
+        }
+
+        &__products {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            margin-top: 90px;
+            grid-gap: 30px;
+        }
+
+        &__product {
+            display: flex;
+            flex-direction: column;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0px 4px 9px #d3d3d3;
+            background-color: #fff;
+            &:last-child {
+                margin-right: 0px;
+            }
+            &:hover {
+                .catalog__product-heading {
+                    color: $yellow;
+                }
+            }
+        }
+
+        &__product-age {
+            background-color: $blue;
+            width: 135px;
+            padding: 5px 12px;
+            text-transform: uppercase;
+            font-weight: 500;
+            align-self: flex-end;
+            color: #fff;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        &__product-heading {
+            margin: 20px 0;
+            transition: .4s ease color;
+        }
+
+        &__product-price {
+            margin: 24px 0;
+            text-align: center;
+            color: $red;
+            font-weight: 500;
+            font-size: 24px;
+        }
+
+        &__product-decription-item {
+            padding-left: 30px;
+            margin-bottom: 7px;
+            position: relative;
+            color: #5b636b;
+            &:before {
+                content: '';
+                width: 22px;
+                height: 22px;
+                background: url('../img/game/game-icons.svg') no-repeat;
+                background-size: cover;
+                position: absolute;
+                left: 0;
+                top: -2px;
+            }
+            @for $i from 2 through 5 {
+                &:nth-child(#{$i}) { 
+                    &:before {
+                        background-position: 0px (($i - 1) * -25px);
+                    }
+                }
+            }
+
+        }
+    }
+
+    /* CATALOG SECTION END */
+
+    /* PLAYER SECTION */
+
+    .player {
+        background: url('../img/player-bg.png') no-repeat;
+        background-size: cover;
+        min-height: 100vh;
+        margin-top: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* PLAYER SECTION END */
+
+
+    /* QUEST SECTION */
+
+    .quests-section {
+        padding: 120px 0;
+    }
+
+    .quests {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 90px;
+        grid-gap: 40px;
+        margin-bottom: 55px;
+
+        &__item {
+            display: flex;
+            align-items: center;
+        }
+
+        &__icon {
+            margin-right: 23px;
+            min-width: 140px; 
+        }
+
+        &__text {
+            font-size: 24px;
+            max-width: 400px;
+        }
+    }
+
+    /* QUEST SECTION END */
+
+    /* QUESTIONS SECTION */
+
+    .questions-section  {
+        padding: 85px 0;
+    }
+
+    .questions {
+        margin-bottom: 80px;
+        &__heading {
+            margin-bottom: 90px;
+        }
+    }
+
+    .question {
+        margin-bottom: 45px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &__button {
+            font-size: 30px;
+        }
+    }
+
+
+    /* QUESTIONS SECTION END */
+
+
+    /* REVIEWS SECTION */
+
+    .reviews-section {
+        padding: 120px 0 240px;
+    }
+
+    .reviews {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 35px;
+        grid-row-gap: 55px;
+        margin-top: 60px;
+
+        &__heading {
+            margin-bottom: 24px;
+        }
+    }
+
+    .review {
+        padding: 35px 40px;
+        background-color: #fff;
+        box-shadow: 0px 4px 9px #D3D3D3;
+        border-radius: 14px;
+
+        &__person {
+            display: flex;
+        }
+
+        &__text {
+            margin: 25px 0 5px;
+        }
+
+        &__photo {
+            margin-right: 28px;
+        }
+
+        &__date {
+            color: #a5aaaf;
+            margin: 10px 0 7px;        
+        }
+
+        &__stars {
+            color: $yellow;
+            font-size: 21px;
+            display: flex;
+            align-items: center;
+        }
+
+        &__read-all {
+            color: $yellow;
+            text-decoration: underline;
+            font-size: 20px;
+            font-weight: 400;
+            text-transform: initial; 
+        }
+    }
+
+
+    .big-number {
+        font-size: 42px;
+        font-weight: 300;
+    }
+
+    .stars {
+        margin-left: 12px;
+        width: 150px;
+        height: 30px;
+        display: inline-block;
+        background: url("../img/star.svg");
+    }
+
+
+    /* REVIEWS SECTION END */

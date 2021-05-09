@@ -1,4 +1,17 @@
+@use "variables.scss" as *;
+@use "sass:map";
+
+
 /* CONFIGURATION */
+@mixin reset {
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
 html {
     overflow-x: hidden;
     font-family: 'Rubik', sans-serif
@@ -36,9 +49,7 @@ a {
 }
 
 *, *::after, *::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    @include reset;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -46,28 +57,28 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: map.get($font-sizes, "h1");
     line-height: 59px;
 }
 
 h2 {
-    font-size: 2.7rem;
+    font-size: map.get($font-sizes, "h2");
 }
 
 h3 {
-    font-size: 2.4rem;
+    font-size: map.get($font-sizes, "h3");
 }
 
 h4 {
-    font-size: 2rem;
+    font-size: map.get($font-sizes, "h4");
 }
 
 h5 {
-    font-size: 1.6rem;
+    font-size: map.get($font-sizes, "h5");
 }
 
 h6 {
-    font-size: 1.2rem;
+    font-size: map.get($font-sizes, "h6");
 }
 
 button {
@@ -91,6 +102,7 @@ button {
     }
 
     &_simple {
+        @extend .button;
         color: $red;
         font-size: 1rem;
         &:hover {
@@ -100,20 +112,24 @@ button {
     }
 
     &_red {
+        @extend .button_background;
+        @extend .button;
         background-color: $red;
         box-shadow: 2px 4px 9px rgba(243, 55, 87, .42);
         &:hover {
-            background-color: #b0354a;
+            background-color: darken($red, 10%);
             color: $black;
         }
     }
 
 
     &_yellow {
+        @extend .button_background;
+        @extend .button;
         background-color: $yellow;
         box-shadow: 2px 4px 9px rgba(242,178,54, .42);
         &:hover {
-            background-color:#fbb835;
+            background-color: darken($yellow, 10%);
             color: $black;
         }
     }

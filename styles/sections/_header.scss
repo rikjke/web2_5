@@ -1,0 +1,159 @@
+@use "../variables.scss" as *;
+
+/* HEADER */
+
+.header {
+    &__card, &__user, &__burger {
+        width: 45px;
+        height: 45px;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 12px;
+    }
+
+    &__upper {
+        box-shadow: 0px 5px 13px #ebe7e0;
+        background: rgb(242,178,54);
+        background: linear-gradient(135deg,
+         rgba(242,178,54,1) 0%,
+        rgba(255,156,26,1) 100%);
+        padding: 40px 0 30px
+    }
+
+    &__search {
+        flex-basis: 320px;
+    }
+    
+    &__options {
+        display: flex;
+        align-items: center;
+    }
+
+    &__card {
+        margin-right: 24px;
+    }
+
+    &__card, &__user {
+        position: relative;
+        &:after {
+            content: '3';
+            position: absolute;
+            right: 3px;
+            top: 3px;
+            border-radius: 50%;
+            background-color: $red;
+            font-family: 'Rubik', sans-serif;
+            font-weight: 500;
+            font-size: 12px;
+            width: 16px;
+            height: 16px;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &__menu-link {
+        color: $black;
+        padding: 20px;
+        display: block;
+    }
+
+    &__menu-item {
+        position: relative;
+        &:hover {
+            .header__menu-link {
+                background-color: $yellow;
+                color: #fff;
+            }
+            .header__submenu {
+                display: block;
+            }
+        }
+    }
+
+    &__menu {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__submenu {
+        position: absolute;
+        background-color: #fff;
+        left: 0;
+        right: 0;
+        display: none;
+        z-index: 5;
+    }
+
+    &__submenu-link {
+        padding: 20px;
+        color: $black;
+        display: block;
+        &:hover {
+            background-color: $yellow;
+            color: #fff;
+        }
+    }
+
+    &__burger {
+        display: none;
+    }
+}
+
+.logo {
+    &-wrapper {
+        margin-right: 115px;
+        color: #fff;
+    }
+
+    &-text {
+        font-weight: 500;
+        font-size: 18px;
+        margin-top: 5px;  
+    }
+}
+
+.card, .user, .burger {
+    padding: 6px;
+}
+
+.search {
+    border-radius: 26px;
+    padding: 12px 20px;
+    width: 100%;
+    border: none;
+    color: $gray;
+    font-size: 16px;
+    background-image: url('../img/search.svg');
+    background-position: 95%;
+    background-repeat: no-repeat;
+}
+
+.contacts {
+    color: $brown;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.container {
+    &_header-nav {
+        justify-content: flex-end;
+        display: flex;
+    }
+
+    &_header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.contacts_mobile {
+    display: none;
+}
+
+/* HEADER ENDS */
